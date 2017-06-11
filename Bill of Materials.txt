@@ -1,0 +1,18 @@
+Part #  Description         Item
+U1      Microcontroller     SAM4S8B (LQFP style)
+U2      Wifi Chip           Zentri AMW004 Wallaby
+U3      Camera Connector
+U3      Camera Module       Omnivision OV2640
+U5      Voltage Regulator
+U6      Barrel Jack
+U7      Button
+IC1     I2S Microphone      SPH0645LM4H-B
+G7      Chrystal
+
+N/A     Power Cord
+N/A     Atmel Debugger
+N/A     FTDI Cord
+
+Passive components as labeled.
+
+Necessary software: Atmel Studio
