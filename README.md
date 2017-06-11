@@ -15,7 +15,7 @@ This project aims to walk through the steps of designing and building a webcam f
 
 ## 3. Solder components onto board
 
-If you have experience with surface mount soldering, this should be fairly straightforward. If you do not, we recommend practicing some before working with any expensive components. Our instructor's videos at https://www.youtube.com/playlist?list=PL1ec5YBm_crySPZat6Y5e9hxfIUI7d97B provide a great tutorial.
+If you have experience with surface mount soldering, this should be fairly straightforward. If you do not, we recommend practicing some before working with any expensive components. Our [instructor's videos]( https://www.youtube.com/playlist?list=PL1ec5YBm_crySPZat6Y5e9hxfIUI7d97B) provide a great tutorial.
 
 We recommend the following soldering order to unit test each component before moving forward.
 
@@ -27,7 +27,7 @@ v. Camera module and associated passive components. Be sure to solder the connec
 
 ## 4. Configure wifi chip
 
-The wifi chip requires a fair degree of configuration to work correctly. Zentri helpfully includes an OS to which commands are issued, and it's quite easy to work with. The command API can be found here, for reference: https://docs.zentri.com/zentrios/wz/3.3/cmd/commands. We recommend issuing these commands via a terminal emulator (TeraTerm for windows or CoolTerm for Mac) connected to the header pins for the UART communication via an FTDI cable. These operations can also be performed by editing the MCU code and running commands, but that's much more difficult and harder to read/interpret feedback. 
+The wifi chip requires a fair degree of configuration to work correctly. Zentri helpfully includes an OS to which commands are issued, and it's quite easy to work with their [command API](https://docs.zentri.com/zentrios/wz/3.3/cmd/commands). We recommend issuing these commands via a terminal emulator ([TeraTerm](https://ttssh2.osdn.jp/index.html.en) for windows or [CoolTerm](http://freeware.the-meiers.org/) for Mac) connected to the header pins for the UART communication via an FTDI cable. These operations can also be performed by editing the MCU code and running commands, but that's much more difficult and harder to read/interpret feedback.
 
 
 
