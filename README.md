@@ -38,6 +38,15 @@ The wifi chip requires a fair degree of configuration to work correctly. Zentri 
 3. Connect the device to your network with the setup command. Once the command has been run, find the device's network on your computer. Connect to it, visit setup.com, and follow the prompts to connect to the desired network. Thereafter, the web console can be accessed from http://zentrios-XYZ.local/, where XYZ are the last 3 digits of your wifi chip's serial number.
 4. Register with Zentri, and claim your device via the dms claim command.
 5. Update the device's firmware with the OTA command.
+6. Set the indicator GPIOs to indicate on the correct LEDs by running the following commands:
+
+- set sy i g wlan 20
+- set sy i g network 21
+- set sy i g softap 22
+
+7. Load TLS certificate onto the chip using its file uploader. Change its default tls certificate to this file via the ne t a command.
+
+8. Change the baud rate by setting the ua b variable for UART1. The default speed for UART1 is 115200, and our system is designed to run at 2.5Mbauds. You may want to turn the baud rate down in the MCU code to test operation before turning both up to this high speed - we haven't found a terminal emulator that can successfully interpret messages at this speed, and any issues can be difficult to debug.
 
 ## Configure microcontroller
 
