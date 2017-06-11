@@ -9,30 +9,34 @@ This project aims to walk through the steps of designing and building a webcam f
 
 
 
-## 1. Order all components
+## Order all components
 
-## 2. Configure server
+## Configure server
 
-## 3. Solder components onto board
+## Solder components onto board
 
 If you have experience with surface mount soldering, this should be fairly straightforward. If you do not, we recommend practicing some before working with any expensive components. Our [instructor's videos]( https://www.youtube.com/playlist?list=PL1ec5YBm_crySPZat6Y5e9hxfIUI7d97B) provide a great tutorial.
 
 We recommend the following soldering order to unit test each component before moving forward.
 
-i. Power circuit: barrel jack, voltage regulator, power indicator LED, associated resistors and capacitors. Confirm that ground and power are not connected via continuity test. Plug in power cord and confirm that the power indicator lights up.
-ii. Microcontroller, PLL circuit, crystal oscillator, buttons, associated bypass capacitors, and header pins. After soldering the MCU, confirm each connection via continuity test to another via or pad, and confirm that no pins are connected to power or ground that shouldn't be. Connect the Atmel debugger, power the circuit, and confirm that the device signature can be read from Atmel Studio.
-iii. Wifi Chip, indicator LEDs, header pins, and associated bypass capacitors. Again, confirm each connection individually before proceeding. To confirm proper operation, perform step 4 to configure the chip.
-iv. Microphone and associated passive components.
-v. Camera module and associated passive components. Be sure to solder the connector without the module inserted, and again confirm connections individually before proceeding.
+1. Power circuit: barrel jack, voltage regulator, power indicator LED, associated resistors and capacitors. Confirm that ground and power are not connected via continuity test. Plug in power cord and confirm that the power indicator lights up.
+2. Microcontroller, PLL circuit, crystal oscillator, buttons, associated bypass capacitors, and header pins. After soldering the MCU, confirm each connection via continuity test to another via or pad, and confirm that no pins are connected to power or ground that shouldn't be. Connect the Atmel debugger, power the circuit, and confirm that the device signature can be read from Atmel Studio.
+3. Wifi Chip, indicator LEDs, header pins, and associated bypass capacitors. Again, confirm each connection individually before proceeding. To confirm proper operation, perform step 4 to configure the chip.
+4. Microphone and associated passive components.
+5. Camera module and associated passive components. Be sure to solder the connector without the module inserted, and again confirm connections individually before proceeding.
 
-## 4. Configure wifi chip
+## Configure wifi chip
 
-The wifi chip requires a fair degree of configuration to work correctly. Zentri helpfully includes an OS to which commands are issued, and it's quite easy to work with their [command API](https://docs.zentri.com/zentrios/wz/3.3/cmd/commands). We recommend issuing these commands via a terminal emulator ([TeraTerm](https://ttssh2.osdn.jp/index.html.en) for windows or [CoolTerm](http://freeware.the-meiers.org/) for Mac) connected to the header pins for the UART communication via an FTDI cable. These operations can also be performed by editing the MCU code and running commands, but that's much more difficult and harder to read/interpret feedback.
+The wifi chip requires a fair degree of configuration to work correctly. Zentri helpfully includes an OS to which commands are issued, and it's quite easy to work with their [command API](https://docs.zentri.com/zentrios/wz/3.3/cmd/commands). We recommend issuing these commands via a terminal emulator ([TeraTerm](https://ttssh2.osdn.jp/index.html.en) for windows or [CoolTerm](http://freeware.the-meiers.org/) for Mac) connected to the header pins for the UART communication via an FTDI cable. If you use the FTDI cable, make sure that the microcontroller will not be attempting to use the UART bus (either because no code has been loaded onto it or because it does not configure or use its UART module), or bus contention will result. These operations can also be performed by editing the MCU code and running commands, but that's much more difficult and harder to read/interpret feedback.
 
+1. Connect to the chip. Confirm your connection by hitting Enter; the chip should respond with Ready.
+2. If you're using a network which requires registration, obtain its mac address via the get wl m query, and register it to the network.
+3. Connect the device to your network with the setup command. Once the command has been run, find the device's network on your computer. Connect to it, visit setup.com, and follow the prompts to connect to the desired network. Thereafter, the web console can be accessed from http://zentrios-XYZ.local/, where XYZ are the last 3 digits of your wifi chip's serial number.
+3. Register with Zentri, and claim your device via the dms claim command.
+4. Update the device's firmware with the OTA command.
 
+## Configure microcontroller
 
-## 5. Configure microcontroller
+## Print enclosure
 
-## 6. Print enclosure
-
-## 7. Enjoy!
+## Enjoy!
