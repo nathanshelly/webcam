@@ -15,14 +15,18 @@ This project aims to walk through the steps of designing and building a webcam f
 
 ## Solder components onto board
 
-If you have experience with surface mount soldering, this should be fairly straightforward. If you do not, we recommend practicing some before working with any expensive components. Our [instructor's videos]( https://www.youtube.com/playlist?list=PL1ec5YBm_crySPZat6Y5e9hxfIUI7d97B) provide a great tutorial.
+If you have experience with surface mount soldering, this should be fairly straightforward. If you do not, we recommend practicing some before working with any expensive components. [This playlist](https://www.youtube.com/playlist?list=PL1ec5YBm_crySPZat6Y5e9hxfIUI7d97B) has many useful videos for this project, including several specifically on soldering.
 
 We recommend the following soldering order to unit test each component before moving forward.
 
 1. Power circuit: barrel jack, voltage regulator, power indicator LED, associated resistors and capacitors. Confirm that ground and power are not connected via continuity test. Plug in power cord and confirm that the power indicator lights up.
+
 2. Microcontroller, PLL circuit, crystal oscillator, buttons, associated bypass capacitors, and header pins. After soldering the MCU, confirm each connection via continuity test to another via or pad, and confirm that no pins are connected to power or ground that shouldn't be. Connect the Atmel debugger, power the circuit, and confirm that the device signature can be read from Atmel Studio.
+
 3. Wifi Chip, indicator LEDs, header pins, and associated bypass capacitors. Again, confirm each connection individually before proceeding. To confirm proper operation, perform step 4 to configure the chip.
+
 4. Microphone and associated passive components.
+
 5. Camera module and associated passive components. Be sure to solder the connector without the module inserted, and again confirm connections individually before proceeding.
 
 ## Configure wifi chip
@@ -32,11 +36,15 @@ The wifi chip requires a fair degree of configuration to work correctly. Zentri 
 1. Connect to the chip. Confirm your connection by hitting Enter; the chip should respond with Ready.
 2. If you're using a network which requires registration, obtain its mac address via the get wl m query, and register it to the network.
 3. Connect the device to your network with the setup command. Once the command has been run, find the device's network on your computer. Connect to it, visit setup.com, and follow the prompts to connect to the desired network. Thereafter, the web console can be accessed from http://zentrios-XYZ.local/, where XYZ are the last 3 digits of your wifi chip's serial number.
-3. Register with Zentri, and claim your device via the dms claim command.
-4. Update the device's firmware with the OTA command.
+4. Register with Zentri, and claim your device via the dms claim command.
+5. Update the device's firmware with the OTA command.
 
 ## Configure microcontroller
 
 ## Print enclosure
+
+For designing the enclosure we used an online program called [Onshape](https://www.onshape.com/). This provides a convenient way to edit CAD files with low overhead though it lacks some functionality from a fuller editor like Solidworks. If you'd like to view our Onshape project, follow [this link](https://cad.onshape.com/documents/ae298fb239b6988d4ccff146/w/2fbac33a8452420bf0238e8e/e/6b2309d9b32e628505d094b1).
+
+We've also provided the raw files in two different formats. If you'd like to modify our design [here](./cad/editable) are .sldprt files. If you'd like to print our design as is [here](./cad/printable) are .stl files.
 
 ## Enjoy!
