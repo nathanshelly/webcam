@@ -15,7 +15,8 @@ Here are some potential places to order from: [Mouser](http://www.mouser.com/), 
 
 ## Configure server
 
-
+NGINX configuration
+LetsEncrypt
 
 ## Solder components onto board
 
