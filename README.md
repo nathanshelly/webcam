@@ -57,6 +57,8 @@ set sy i g softap 22
 
 ## Configure microcontroller
 
+To load our code onto the microcontroller, first connect your Atmel debugger to the corresponding header pins and to your computer. Open our Atmel project, and connect to the debugger. Compile and load the code - it should run correctly now that the wifi chip is properly configured.
+
 ## Print enclosure
 
 For designing the enclosure we used an online program called [Onshape](https://www.onshape.com/). This provides a convenient way to edit CAD files with low overhead though it lacks some functionality from a fuller editor like Solidworks. View our [Onshape project here](https://cad.onshape.com/documents/ae298fb239b6988d4ccff146/w/2fbac33a8452420bf0238e8e/e/6b2309d9b32e628505d094b1).
