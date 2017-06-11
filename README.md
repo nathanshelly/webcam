@@ -13,10 +13,11 @@ This project aims to walk through the steps of designing and building a webcam f
 
 Here are some potential places to order from: [Mouser](http://www.mouser.com/), [Digikey](https://www.digikey.com/), [Robotshop](http://www.robotshop.com/).
 
+You'll also need to order the PCB to solder the components onto. We've included our raw EAGLE files, as well as a set of Gerber files that can be sent directly to the manufacturer.
+
 ## Configure server
 
-NGINX configuration
-LetsEncrypt
+
 
 ## Solder components onto board
 
