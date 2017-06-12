@@ -33,7 +33,9 @@ You'll also need to order the PCB to solder the components onto. We've included 
 
 ## Configure server
 
+Our back-end stack consists of NGINX and Tornado. NGNIX directly handles requests for our static HTML, CSS and Javascript files while serving as a reverse proxy forwarding dynamic websocket requests to our Tornado server. We currently serve the website over HTTPS though this is not strictly necessary. If you plan to also serve over HTTPS our [NGINX configuration file](./nginx_config) would require only changing the server name in the port 80 and 443 blocks and then updating the ssl_certificate/key lines to point to your certificate. If you've never served over HTTPS before but would like to try we highly recommend getting a certificate from [LetsEncrypt](https://letsencrypt.org/) (they have great documentation and are free!).
 
+If you want to serve over HTTP instead you'll need to move the location directives from the 443 block to the 80 block and remove the `return 301 https://$server_name$request_uri;` line which redirects all HTTP traffic to HTTPS. The ssl_certificate/key lines can also be removed.
 
 ## Solder components onto board
 
@@ -68,7 +70,7 @@ set sy i g network 21
 set sy i g softap 22
 ```
 
-7. Load TLS certificate onto the chip using its file uploader. Change its default tls certificate to this file via the ne t a command.
+7. (Do this step only if you want to serve over HTTPS) Load TLS certificate onto the chip using its file uploader. Change its default TLS certificate to this file via the ne t a command.
 
 8. Change the baud rate by setting the ua b variable for UART1. The default speed for UART1 is 115200, and our system is designed to run at 2.5Mbauds. You may want to turn the baud rate down in the MCU code to test operation before turning both up to this high speed - we haven't found a terminal emulator that can successfully interpret messages at this speed, and any issues can be difficult to debug.
 
