@@ -7,7 +7,7 @@ U5      Voltage Regulator
 U6      Barrel Jack
 U7      Button
 IC1     I2S Microphone      SPH0645LM4H-B
-G7      Chrystal
+G7      Crystal
 
 N/A     Power Cord
 N/A     Atmel Debugger
