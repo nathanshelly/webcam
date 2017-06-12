@@ -10,6 +10,21 @@ This project aims to walk through the steps of designing and building a webcam f
 :-------------------------:|:-------------------------:
 ![plastic](./images/plastic.jpg "3D Printed Enclosure")  |  ![wood](./images/wood.jpg "Wood Enclosure")
 
+## Assembly order
+
+We recommend the following order to assemble this open-source project from scratch.
+
+1. [Order components](#order-all-components)
+2. [Configure server](#configure-server)
+3. [Solder board](#solder-components-onto-board)
+4. [Configure wifi](#configure-wifi-chip)
+5. [Configure MCU](#configure-microcontroller)
+6. [Print enclosure](#print-enclosure)
+
+## Thanks
+
+A big thank you to our instructor, Professor Ilya Mikhelson of Northwestern University. This webcam project was created as a part of his Engineering System Design sequence.
+
 ## Order all components
 
 Here are some potential places to order from: [Mouser](http://www.mouser.com/), [Digikey](https://www.digikey.com/), [Robotshop](http://www.robotshop.com/).
