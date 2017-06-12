@@ -4,7 +4,7 @@
 
 ## Description
 
-This project aims to walk through the steps of designing and building a webcam from scratch. We'll walk through PCB (printed circuit board) design, soldering of components, 3D printing of the outer enclosure, MCU code and website code to enable you to make your own webcam, or modify our design however you'd like! This repository acts as the landng page to various parts of the project. Here we'll have various files such as our PCB designs, our CAD files and a bill of materials. Our [microcontroller code](https://github.com/nathanshelly/webcam_mcu_code) and [server code](https://github.com/nathanshelly/webcam_web_code) each have their own repositories, where our full code for each can be explored or downloaded.
+This project aims to walk through the steps of designing and building a webcam from scratch. We'll walk through PCB (printed circuit board) design, soldering of components, 3D printing of the outer enclosure, MCU code and website code to enable you to make your own webcam, or modify our design however you'd like! This repository acts as the landing page to various parts of the project. Here we'll have various files such as our PCB designs, our CAD files and a bill of materials. Our [microcontroller code](https://github.com/nathanshelly/webcam_mcu_code) and [server code](https://github.com/nathanshelly/webcam_web_code) each have their own repositories, where our full code for each can be explored or downloaded.
 
 3D Printed Enclosure             |  Wood Milled Enclosure
 :-------------------------:|:-------------------------:
@@ -25,7 +25,7 @@ We recommend the following order to assemble this open-source project from scrat
 
 A big thank you to our instructor, Professor Ilya Mikhelson of Northwestern University. This webcam project was created as a part of his Engineering System Design sequence.
 
-## Order all components
+## Order components
 
 We've included a [Bill of Materials](./BOM.txt) that details all of the components used in the project - primarily components to be soldered onto the board, but also some cabling to connect to it.
 
@@ -39,7 +39,7 @@ Our back-end stack consists of NGINX and Tornado. NGNIX directly handles request
 
 If you want to serve over HTTP instead you'll need to move the location directives from the 443 block to the 80 block and remove the `return 301 https://$server_name$request_uri;` line which redirects all HTTP traffic to HTTPS. The ssl_certificate/key lines can also be removed.
 
-## Solder components onto board
+## Solder board
 
 If you have experience with surface mount soldering, this should be fairly straightforward. If you do not, we recommend practicing some before working with any expensive components. [This playlist](https://www.youtube.com/playlist?list=PL1ec5YBm_crySPZat6Y5e9hxfIUI7d97B) has many useful videos for this project, including several specifically on soldering.
 
@@ -84,6 +84,6 @@ To load our code onto the microcontroller, first connect your Atmel debugger to 
 
 For designing the enclosure we used an online program called [Onshape](https://www.onshape.com/). This provides a convenient way to edit CAD files with low overhead though it lacks some functionality from a fuller editor like Solidworks. View our [Onshape project here](https://cad.onshape.com/documents/ae298fb239b6988d4ccff146/w/2fbac33a8452420bf0238e8e/e/6b2309d9b32e628505d094b1).
 
-We've also provided the raw files in two different formats. If you'd like to modify our design [here](./cad/editable) are .sldprt files. If you'd like to print our design as is [here](./cad/printable) are .stl files.
+We've also provided the raw files in two different formats. If you'd like to modify our design [here](./enclosure/editable) are .sldprt files. If you'd like to print our design as is [here](./enclosure/printable) are .stl files.
 
 ## Enjoy!
