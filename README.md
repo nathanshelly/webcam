@@ -27,6 +27,8 @@ A big thank you to our instructor, Professor Ilya Mikhelson of Northwestern Univ
 
 ## Order all components
 
+We've included a [Bill of Materials](./BOM.txt) that details all of the components used in the project - primarily components to be soldered onto the board, but also some cabling to connect to it.
+
 Here are some potential places to order from: [Mouser](http://www.mouser.com/), [Digikey](https://www.digikey.com/), [Robotshop](http://www.robotshop.com/).
 
 You'll also need to order the PCB to solder the components onto. We've included our [raw EAGLE files](./board/), as well as a set of [Gerber files](./board/gerber_files.zip) that can be sent directly to the manufacturer.
