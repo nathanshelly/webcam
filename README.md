@@ -4,7 +4,7 @@
 
 ## Description
 
-This project aims to walk through the steps of designing and building a webcam from scratch. We'll walk through PCB (printed circuit board) design, soldering of components, 3D printing of the outer enclosure, MCU code and website code to enable you to make your own webcam, or modify our design however you'd like! This repository acts as the landng page to various parts of the project. Here we'll have various files such as our PCB designs, our CAD files and a bill of materials. We'll link to two different code repositories, one for our MCU code and one for our website code.
+This project aims to walk through the steps of designing and building a webcam from scratch. We'll walk through PCB (printed circuit board) design, soldering of components, 3D printing of the outer enclosure, MCU code and website code to enable you to make your own webcam, or modify our design however you'd like! This repository acts as the landng page to various parts of the project. Here we'll have various files such as our PCB designs, our CAD files and a bill of materials. Our [microcontroller code](#https://github.com/nathanshelly/webcam_mcu_code) and [server code](#https://github.com/nathanshelly/webcam_web_code) each have their own repositories, where our full code for each can be explored or downloaded.
 
 3D Printed Enclosure             |  Wood Milled Enclosure
 :-------------------------:|:-------------------------:
@@ -29,7 +29,7 @@ A big thank you to our instructor, Professor Ilya Mikhelson of Northwestern Univ
 
 Here are some potential places to order from: [Mouser](http://www.mouser.com/), [Digikey](https://www.digikey.com/), [Robotshop](http://www.robotshop.com/).
 
-You'll also need to order the PCB to solder the components onto. We've included our raw EAGLE files, as well as a set of Gerber files that can be sent directly to the manufacturer.
+You'll also need to order the PCB to solder the components onto. We've included our [raw EAGLE files](#./board/), as well as a set of [Gerber files](#./board/gerber_files.zip) that can be sent directly to the manufacturer.
 
 ## Configure server
 
