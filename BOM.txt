@@ -1,13 +1,13 @@
 Part #  Description         Item
 U1      Microcontroller     SAM4S8B (LQFP style)
 U2      Wifi Chip           Zentri AMW004 Wallaby
-U3      Camera Connector
+U3      Camera Connector    TE Connectivity AMP Connectors 2-1734592-4
 U3      Camera Module       Omnivision OV2640
-U5      Voltage Regulator
-U6      Barrel Jack
-U7      Button
+U5      Voltage Regulator   Texas Instruments TLV1117LV30DCYR
+U6      Barrel Jack         Wurth Electronics Inc. 694106106102
+U7      Button              Panasonic EVQ11L07K
 IC1     I2S Microphone      SPH0645LM4H-B
-G7      Crystal
+G7      Crystal             Abracon LLC ABM7-12.000MHZ-D2Y-T
 
 N/A     Power Cord
 N/A     Atmel Debugger
